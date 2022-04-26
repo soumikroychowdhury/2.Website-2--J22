@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1.0 | Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="headerheading">
+            <img src="logo.png" alt="This is a logo" width="50rem">
+        Online Competition</h1>
+        <nav class="navbar">
+            <a href="#" class="nav-branding">ABCD</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.html" class="nav-link">Registration Form</a>
+                </li>
+                <li class="nav-item">
+                    <a href="timeline.html" class="nav-link">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a href="prize.html" class="nav-link">Prize Section</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.
+        addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+    </script>
+    <div class="arrow">
+        <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+    </div>
+    <main>
+        <br><br><br><br><br><br><br><br><br><br>
+        <h2 class="pageheading">Registration Form</h2>
+        <br><br>
+        <div class="container">
+            <form action="">
+                <h1 class="registrationheading">Registration</h1>
+                <p>Required fields are marked as *</p>
+                <p>Name: * <input type="text" name="name" placeholder="Elon Musk" required></p>
+                <p>
+                    Registration No. * <input type="text" name="registration_number" id="registration_number" required>
+                </p>
+                <p>
+                    Roll No. * <input type="text" name="roll_number" id="roll_number" required>
+                </p>
+                <p>
+                    Section: *
+                    <select name="section" id="section" required>
+                        <option value="">--Choose your section--</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                    </select>
+                </p>
+                <p>Date of Birth: <input type="date" name="birth_date" id="birth_date"></p>
+                <p>Personal Email ID: * <input type="email" name="personalemail" id="personalemail" placeholder="----@gmail.com" required></p>
+                <p>Institute Email ID: * <input type="email" name="instituteemail" id="instituteemail" placeholder="----@-----.ac.in" required></p>
+                <p>Mobile Number(Whatsapp): *<input type="number" name="whatsappnumber" id="whatsappnumber" placeholder="----------" required></p>
+                <p>Other Contact Number: <input type="number" name="contactnumber" id="contactnumber"></p>
+                <fieldset>
+                    <legend>Are you interested to participate in this event? * </legend>
+                    <p class="yesyes">
+                        Yes <input type="radio" name="yesno" id="yes" required>
+                        No <input type="radio" name="yesno" id="no" required>
+                    </p>
+                </fieldset>
+                <p>Address: <textarea name="address" id="address" cols="100" rows="5"></textarea></p>
+                <p>Pincode: <input type="password" name="pincode" id="pincode"></p>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <br><br><br><br>
+        <p>Thank You! Visit Again!</p>
+        <p>Contact Us: 0123456789, ----@gmail.com</p>
+    </footer>
+</body>
+</html>
